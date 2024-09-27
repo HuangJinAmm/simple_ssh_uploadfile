@@ -1,0 +1,22 @@
+[package]
+name = "atb"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+serde = { version = "1.0", features = ["derive"] }
+toml = "0.8.19"
+ssh2 = "0.9.4"
+log = "0.4"
+env_logger = "0.11.5"
+chrono = "0.4"
+encoding_rs = "0.8"
+encoding_rs_io = "0.1"
+# russh = "0.45.0"
+# tokio = { version = "1.28", features = ["full"] }  # 添加 tokio 依赖
+# russh-keys = "0.45.0"
+
+[profile.release]
+lto = true
+opt-level = "z"
+strip = true
